@@ -1,0 +1,5 @@
+export {default as Footer } from './Layout/Footer'
+export {default as Header } from './Layout/Header'
+export {default as CustomLoader} from './Loader/Loader'
+export {default as ProductsList } from './Sections/ProductsList'
+export {default as CheckoutPage} from './Sections/CheckoutPage'
