@@ -3,8 +3,9 @@
 import React from "react";
 import Image from "next/image";
 import { toast, Toaster } from "react-hot-toast";
-import { Carousel } from "react-responsive-carousel";
-import { Container, Panel, Rate } from "rsuite";
+
+
+import { Carousel, Container, Panel, Rate } from "rsuite";
 import { dataex } from "utils/ProductList/Listings";
 import { Product } from "@Types";
 import {BiCartAdd} from "react-icons/bi"
@@ -56,7 +57,7 @@ const ProductsList = () => {
     dispatch(addToBasket(item));
   };
   return (
-    <>
+   <>
       <Toaster />
       <Container className="w-full h-full my-5 flex justify-center items-center flex-col text-black dark:text-white">
         <Container className="w-full h-full my-5 flex justify-center items-center">
@@ -71,9 +72,6 @@ const ProductsList = () => {
               >
                 <Container className="h-[240px] overflow-hidden">
                   <Carousel
-                    showStatus={false}
-                    showThumbs={false}
-                    infiniteLoop
                     className="h-full w-full overflow-hidden"
                   >
                     {product.image.map((imageURL, i) => (
@@ -141,9 +139,6 @@ const ProductsList = () => {
                 >
                   <Container className="h-[240px] overflow-hidden">
                     <Carousel
-                      showStatus={false}
-                      showThumbs={false}
-                      infiniteLoop
                       className="h-full w-full overflow-hidden"
                     >
                       {product.image.map((imageURL, i) => (
